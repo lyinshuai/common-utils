@@ -1,0 +1,40 @@
+{
+  "name": "tmaito-utils",
+  "version": "0.4.4",
+  "description": "axios fetch",
+  "keywords": [
+    "axios",
+    "fetch"
+  ],
+  "author": "liyinshuai",
+  "homepage": "",
+  "license": "ISC",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "main": "dist/index.common.js",
+  "module": "dist/index.esm.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "types/*"
+  ],
+  "scripts": {
+    "build:type": "rimraf types && tsc -p ./tsconfig.type.json",
+    "build": "rollup -c --environment NODE_ENV:production",
+    "clean": "rimraf dist coverage",
+    "coverage": "codecov",
+    "dev": "rimraf dist && rollup -c --watch --environment NODE_ENV:development",
+    "prebuild": "npm run clean && npm run build:type",
+    "test": "jest",
+    "version": "standard-version"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "testURL": "http://localhost"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "js-pinyin": "^0.1.9"
+  }
+}

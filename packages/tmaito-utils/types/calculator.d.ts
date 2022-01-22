@@ -1,0 +1,21 @@
+declare type numType = number | string;
+declare const strip: (num: numType, precision?: number) => number;
+declare const digitLength: (num: numType) => number;
+declare const float2Fixed: (num: numType) => number;
+declare const plus: (num1: numType, num2: numType, ...others: numType[]) => number;
+declare const minus: (num1: numType, num2: numType, ...others: numType[]) => number;
+declare const times: (num1: numType, num2: numType, ...others: numType[]) => number;
+declare const divide: (num1: numType, num2: numType, ...others: numType[]) => number;
+declare const round: (num: numType, ratio: number) => number;
+export { strip, plus, minus, times, divide, round, digitLength, float2Fixed };
+declare const _default: {
+    strip: (num: string | number, precision?: number) => number;
+    plus: (num1: string | number, num2: string | number, ...others: (string | number)[]) => number;
+    minus: (num1: string | number, num2: string | number, ...others: (string | number)[]) => number;
+    times: (num1: string | number, num2: string | number, ...others: (string | number)[]) => number;
+    divide: (num1: string | number, num2: string | number, ...others: (string | number)[]) => number;
+    round: (num: string | number, ratio: number) => number;
+    digitLength: (num: string | number) => number;
+    float2Fixed: (num: string | number) => number;
+};
+export default _default;
